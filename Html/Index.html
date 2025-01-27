@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anil-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="stylecssForPortfolio.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        /* background-color: #f4f4f4; */
+        color: #333;
+        background-color: #34495e;
+        /* background-color: (9, 9, 68) */
+        /* background-color: #007bff; */
+      }
+
+      header {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        position: fixed;
+        width: 100%;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .left {
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .right {
+        font-size: 24px;
+      }
+
+      .right ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .right ul li {
+        font-size: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+      .right ul li a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .right ul li:hover {
+        color: #ff0000;
+      }
+
+      main {
+        padding-top: 60px;
+      }
+      main hr {
+        /* border: 0;
+        background: #9c97f1;
+        height: 1px; */
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+
+      section {
+        padding-top: 60px;
+        min-height: 100vh;
+        width: 100%;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        text-transform: inherit;
+      }
+      #Home {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* background-color: rgb(9, 9, 68); */
+        background-color: #34495e;
+        color: white;
+      }
+      .purpleName {
+        color: blueviolet;
+      }
+      #element {
+        color: blueviolet;
+      }
+      #Home .leftHome {
+        font-size: 32px; /* Increase font size here */
+        width: 50%;
+        padding-left: 6%;
+        /* font-size: 22px; */
+        font-weight: 600;
+      }
+      #Home .rightHome {
+        padding-right: 6%;
+      }
+      /* #About {
+        background-color: gray;
+        color: white;
+        text-align: center;
+      } */
+      #About {
+        /* padding-top: 60px; */
+        padding: 60px 10px;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        /* background-color: #2c3e50; */
+        background-color: #34495e;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      #About h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      #About p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      #About h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .education-container {
+        padding-top: 10px;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      .education-box {
+        background-color: #34495e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: justify;
+        margin-bottom: 20px; /* Adds spacing between boxes */
+      }
+
+      .education-box h4 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+        color: rgb(21, 37, 163);
+      }
+
+      .education-box p {
+        font-size: 1.1rem;
+        margin: 8px 0;
+      }
+
+      .btech {
+        background-color: #27ae60;
+      }
+
+      .intermediate {
+        background-color: #27ae60;
+      }
+
+      .ssc {
+        background-color: #27ae60;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .education-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* #Skills {
+        /* background-color: #333; */
+      /* color: white; */
+      /* }  */
+
+      #Skills {
+        /* max-width: 800px;
+        margin: 50px auto;
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px; */
+        padding: 60px 10px;
+        margin: 0;
+        text-align: center;
+      }
+
+      #Skills h2 {
+        text-align: center;
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .skills-section {
+        margin: 20px 0;
+        color: black;
+        padding: 15px;
+        text-align: justify;
+        padding-bottom: 25px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .skills-section h3 {
+        color: #0066cc;
+        font-size: 1.5rem;
+        border-bottom: 2px solid #0066cc;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        background-color: white;
+      }
+
+      .skills-section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .skills-section ul li {
+        margin: 5px 0;
+        font-size: 1rem;
+        padding: 8px 10px;
+        background: #f1f3f5;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .skills-section ul li:hover {
+        background: #e0f7fa;
+      }
+
+      .languages {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .languages li {
+        width: 30%;
+        text-align: center;
+        font-weight: bold;
+        background: #dff6ff;
+        border: 1px solid #0066cc;
+      }
+      #Projects {
+        padding: 60px 10px;
+        background-color: #2c3e50;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .category {
+        margin: 30px 0;
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #Projects h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      #Projects p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+      .project {
+        padding: 60px 10px;
+        background-color: #34495e;
+        color: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .project h4 {
+        font-size: 1.5rem;
+        color: #1abc9c;
+        margin-bottom: 10px;
+      }
+      .project p {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+      #Achievements {
+        /* background-color: violet; */
+        color: white;
+      }
+      #Participations {
+        color: white;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .participation {
+        /* background-color: beige; */
+        color: black;
+        padding: 15px;
+        text-align: justify;
+        padding-bottom: 25px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .participation a {
+        color: black;
+        margin-top: 8px;
+        text-decoration: none;
+        display: flex;
+        border: 2px solid grey;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        background-color: antiquewhite;
+        width: 200px;
+        height: 35px;
+      }
+      #Participations h2 {
+        font-family: Arial, sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      #Resume {
+        /* background-color: yellow; */
+        /* height: 80vh; */
+        color: white;
+        text-align: center;
+      }
+      #Resume h2 {
+        font-family: Arial, sans-serif;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      .resume {
+        height: 255px;
+        color: black;
+        padding: 15px;
+        text-align: center;
+        border: 2px solid #ddd;
+        background-color: #fff;
+        margin: 0 50px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .resume a {
+        background-color: rgb(89, 179, 89);
+        color: white;
+        border: 2px solid grey;
+        border-radius: 8px;
+        text-decoration: none;
+        /* font-size: 25px; */
+        /* color: #0066cc; */
+        height: 50px;
+        width: 150px;
+        font-family: Arial, sans-serif;
+        padding: 10px 20px;
+      }
+      #Contact {
+        background-color: white;
+        color: black;
+        text-align: center;
+      }
+
+      .socialAccounts {
+        margin-top: 30px;
+        padding: 20px 20px;
+        /* background-color: #e0f7fa; */
+        display: flex;
+        align-items: center;
+        justify-self: center;
+      }
+
+      .socialAccounts a {
+        padding: 20px 30px;
+        text-decoration: none;
+        height: 50px;
+        width: 50px;
+        display: flex; /* Ensures centering for the icon */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .socialAccounts a i {
+        font-size: 30px;
+      }
+      .socialAccounts a i:hover {
+        font-size: 40px;
+      }
+      .socialAccounts img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+
+      footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      img {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Anil Nunnagopula</div>
+        <div class="right">
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <!-- <li><a href="#Achievements">Achievements</a></li> -->
+            <li><a href="#Participations">Participations</a></li>
+            <li><a href="#Resume">Resume</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="Home">
+        <div class="leftHome">
+          Hi, I am <span class="purpleName">Anil Nunnagopula</span>
+          <div>And I am a passionate</div>
+          <!-- <div>coder and web developer</div> -->
+          <span id="element"></span>
+        </div>
+        <div class="rightHome">
+          <img src="pngCoder.png" alt="myPng" />
+        </div>
+      </section>
+
+      <hr />
+      <!-- <section id="About">About</section> -->
+
+      <section id="About">
+        <h2>About</h2>
+        <p style="text-align: justify; margin: 0; padding: 0">
+          I am currently pursuing a
+          <strong>B.Tech in Civil Engineering</strong> at CVR College of
+          Engineering with a minor in
+          <strong>Artificial Intelligence and Machine Learning (AI-ML)</strong>.
+          Alongside my core expertise in civil engineering, I have developed
+          strong skills in coding and frontend development. This
+          multidisciplinary approach enables me to integrate modern technology
+          solutions into traditional engineering practices, creating innovative
+          and efficient outcomes.
+        </p>
+
+        <h3 style="padding-top: 25px; padding-bottom: 0px">Education</h3>
+        <div class="education-container">
+          <div class="education-box btech">
+            <h4>B.Tech in Civil Engineering (2022–2026)</h4>
+            <p><b>CVR College of Engineering</b>, Hyderabad</p>
+            <p>
+              <strong>Minor Degree:</strong> Artificial Intelligence and Machine
+              Learning (AI-ML) (2024–2026)
+            </p>
+            <p>
+              "My B.Tech journey at CVR College of Engineering has been one of
+              the most transformative phases of my life. It's not just about
+              academics, but also about personal growth and the many
+              interactions I’ve had with peers, professors, and mentors. This
+              period has exposed me to various aspects of life, helping me build
+              friendships that will last a lifetime. Even though I’m pursuing a
+              degree in Civil Engineering, my passion for the IT field has grown
+              over time. I have developed a strong interest in coding and web
+              development, which I’ve been actively exploring through personal
+              projects and online courses. Apart from academics, I’ve been
+              deeply involved in extracurricular activities such as coding
+              competitions, workshops, technical seminars, and cultural events,
+              which have helped me grow beyond the classroom. These experiences
+              allowed me to grow both as a student and as an individual."
+            </p>
+          </div>
+
+          <div class="education-box intermediate">
+            <h4>Intermediate (MPC) (2018–2020)</h4>
+            <p><b>New Sri Chaitanya Junior College</b>,TurkaYamjal,Hyderabad</p>
+            <p>
+              "My time at New Sri Chaitanya Junior College in Hyderabad was a
+              significant phase of transition in my life. It was my first time
+              staying away from home, living in a hostel, and adjusting to a
+              completely new environment. This was a period of self-discovery
+              and growth, where I not only made many new friends but also
+              learned to manage my time and responsibilities independently. The
+              new experiences in hostel life and the diverse people I interacted
+              with helped me become more mature and resilient. Academically, I
+              excelled in the MPC stream, and developed a deeper interest in
+              subjects, which laid the foundation for my future in engineering."
+            </p>
+          </div>
+
+          <div class="education-box ssc">
+            <h4>High School (2020)</h4>
+            <p><b>Matilda High School</b>,Kondamallepally,Nalgonda</p>
+            <p>
+              "I completed my entire school education at Matilda High School,
+              from nursery to class 10, which gave me a unique experience of
+              growing and learning in the same environment over the years. I
+              made countless memories and formed lifelong friendships along the
+              way. The journey from my early years to the completion of my SSC
+              was filled with valuable life lessons and academic growth. I
+              excelled in my studies,while also participating in a variety of
+              extracurricular activities . These experiences helped me develop
+              leadership and communication skills that have been crucial in my
+              personal and academic growth."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <section id="Skills">
+        <h2>Skills</h2>
+        <div>
+          <div class="skills-section">
+            <h3>Tech Skills</h3>
+            <ul>
+              <li>Programming Languages: C Programming, Java, Python</li>
+              <li>Web Development: HTML, CSS, JavaScript</li>
+              <li>Frameworks: React</li>
+              <li>Tools: Git, VS Code</li>
+              <li>DataBase Management: RDBMS-SQL ,NoSQL-MongoDb</li>
+              <li>
+                Machine Learning: Supervised Learning (Linear Regression,
+                Logistic Regression), Unsupervised Learning (K-Means Clustering,
+                PCA) Classification and Regression algorithms
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills-section">
+            <h3>Core Skills</h3>
+            <ul>
+              <li>Software Apllications: AutoCad, Revit</li>
+              <li>Surveying using Total Station (Intermediate Level)</li>
+              <li>Structural Analysis and Design</li>
+              <li>
+                Project Management, Problem-Solving and Analytical Thinking
+              </li>
+              <li>Application of AI-ML in Engineering</li>
+            </ul>
+          </div>
+
+          <div class="skills-section">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>
+                Effective Communication, Leadership and Team Collaboration, Time
+                Management, Adaptability and Continuous Learning
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills-section">
+            <h3>Languages Known</h3>
+            <ul class="languages">
+              <li>English</li>
+              <li>Telugu</li>
+              <li>Hindi</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <section
+        id="Projects"
+        style="color: white; text-align: center; padding: 60px 10px"
+      >
+        <h2>Projects</h2>
+        <!-- Tech Projects -->
+        <div class="category">
+          <h3>Tech Projects</h3>
+          <div class="project">
+            <h4>Portfolio</h4>
+            <p>
+              A personal portfolio website created using HTML, CSS, and
+              JavaScript. It showcases my skills, projects, and serves as a
+              professional online presence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Core Projects -->
+        <div class="category">
+          <h3>Core Projects</h3>
+          <div class="project">
+            <h4>Plan And Elevation of G+2 (Duplex House)</h4>
+            <p>
+              Designed detailed plans and elevations for a G+2 residential
+              building using Revit software. This project allowed me to
+              integrate architectural and 3D design.
+            </p>
+          </div>
+          <div class="project">
+            <h4>
+              Structural Health Monitoring of CVR College Buildings (In
+              Progress)
+            </h4>
+            <p>
+              A non-destructive testing project for monitoring the structural
+              health of buildings at CVR College, involving advanced data
+              collection and analysis.
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- <section id="Achievements">Achievements</section> -->
+      <hr />
+      <section id="Participations">
+        <div style="padding-top: 40px">
+          <h2>Participations</h2>
+          <div class="participation">
+            <p>
+              Attended a two days Internation conference on
+              <b
+                >"Sustainable Material,Methodolgies,Technologies And
+                Apllications in Engineering (ICS2MT)2025"</b
+              >
+              which is condcuted by CIVIL Engineering department ,CVR College Of
+              Engineering. The conference was held in a hybrid mode, where
+              delegates presented papers on the usage of sustainable materials.
+              It was an enriching experience where I was exposed to new ideas
+              and gained valuable knowledge about the latest advancements in
+              sustainable engineering practices.
+            </p>
+          </div>
+          <div class="participation">
+            <p>
+              Participated in <b>Anti-Drug Summit 2024</b> as a core committee
+              member from CVR College Of Enginnering at
+              <b>Bits Pilani Hyderabad campus</b> which is condcuted by the
+              Telangana government.I contributed to the summit's efforts to
+              raise awareness about the dangers of drug abuse. Additionally, I
+              took the opportunity to explore the campus and engage with the
+              discussions, reaffirming my commitment to a drug-free lifestyle
+              and promoting a healthy, drug-free environment.The summit was not
+              just an event but an eye-opening experience, as it highlighted the
+              dangers of drug abuse, its social implications, and the measures
+              we can take as a community to tackle this issue. I was actively
+              involved in discussions and awareness campaigns, interacting with
+              both the attendees and speakers, to better understand the
+              psychological, social, and health-related consequences of drugs.
+            </p>
+            <a href="BitsPilani.jpg" target="_blank">View Certificate</a>
+          </div>
+
+          <div class="participation">
+            <p>
+              Participated in the
+              <b>"Industry-Academia Conclave - UTHKARSH"</b> organized by the
+              <b>Institution's Innovation Council (IIC)</b> at CVR College of
+              Engineering on 27th December 2022. During this event, various
+              innovative ideas were presented, and one of the highlights was a
+              demonstration of a mini tractor designed to perform all fieldwork
+              tasks at a low cost. This innovation aims to assist farmers by
+              providing them with an affordable solution for their farming
+              needs. The presentation was insightful and showcased the potential
+              for technological advancements in agricultural practices.
+            </p>
+            <a href="ParticipationInIIC.jpg" target="_blank"
+              >View Certificate</a
+            >
+          </div>
+          <!-- <div class="participation">
+            <p></p>
+          </div> -->
+        </div>
+      </section>
+      <hr />
+
+      <section id="Resume">
+        <h2>Resume</h2>
+        <div>
+          <div class="resume">
+            <h3 style="margin-bottom: 60px">Tech Resume</h3>
+            <a href="AnilNunnagopula_Resume.pdf" target="_blank">View Resume</a>
+          </div>
+
+          <div class="resume">
+            <h3 style="margin-bottom: 60px">Core Resume</h3>
+            <a href="AnilNnnagopula_ResumeCE.pdf" target="_blank"
+              >View Resume</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <section id="Contact">
+        <h2>Contact</h2>
+
+        <p>Want to know more About me? Feel free to reach out!</p>
+
+        <div class="socialAccounts">
+          <a
+            href="https://www.linkedin.com/in/anil-nunnagopula15112004/"
+            target="_blank"
+            class="linkedin-icon"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a
+            href="mailto:anilnunnagopula15@gmail.com,btech2k26@gmail.com,22B81A0104@cvr.ac.in"
+            target="_blank"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+
+          <a href="https://github.com/anilnunnagopula" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://leetcode.com/u/btech2k26/" target="_blank">
+            <img
+              src="leetcodeImage1.png"
+              alt="leetcode"
+              style="height: 35px; width: 35px"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/rowdy_darling_____/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </section>
+
+      <hr />
+    </main>
+
+    <footer>
+      <p>© 2025 Anil Nunnagopula. All Rights Reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Coder and Web Developer..."],
+        typeSpeed: 50,
+      });
+      // Automatically navigate to the Home section on page refresh
+      window.onload = function () {
+        window.location.hash = "#Home";
+      };
+    </script>
+  </body>
+</html>
