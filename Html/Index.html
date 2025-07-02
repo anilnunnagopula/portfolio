@@ -47,14 +47,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 2px 10px;
+        position: relative;
       }
 
       .left {
         font-size: 24px;
         font-weight: 600;
       }
-      .right {
-        font-size: 24px;
+
+      .menu-icon {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
       }
 
       .right ul {
@@ -63,20 +68,44 @@
         gap: 20px;
       }
 
-      .right ul li {
-        font-size: inherit;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: color 0.3s ease;
-      }
       .right ul li a {
         text-decoration: none;
         color: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
       }
 
-      .right ul li:hover {
+      .right ul li a:hover {
         color: #ff0000;
+      }
+
+      /* 🌐 Mobile View */
+      @media (max-width: 768px) {
+        .menu-icon {
+          display: block;
+        }
+
+        .right {
+          display: none;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          background: rgb(18, 16, 16);
+          padding: 15px 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+
+        .right ul {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .right.show {
+          display: block;
+        }
       }
 
       main {
@@ -91,7 +120,9 @@
       }
 
       section {
-        padding-top: 60px;
+        padding:3px;
+        padding-top: 100px;
+        scroll-margin-top: 20px;
         min-height: 100vh;
         width: 100%;
         /* display: flex; */
@@ -99,35 +130,70 @@
         align-items: center;
         text-transform: inherit;
       }
+
+      @media (max-width: 768px) {
+        section {
+          scroll-margin-top: 20px;
+          padding-top: 10px;
+        }
+      }
       #Home {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        /* background-color: rgb(9, 9, 68); */
         background-color: #2c3e50;
         color: white;
+        padding: 20px 0;
+        flex-wrap: wrap;
       }
+
       .purpleName {
         color: blueviolet;
       }
+
       #element {
         color: blueviolet;
       }
+
       #Home .leftHome {
-        font-size: 32px; /* Increase font size here */
+        font-size: 32px;
         width: 50%;
         padding-left: 6%;
-        /* font-size: 22px; */
         font-weight: 600;
       }
+
       #Home .rightHome {
         padding-right: 6%;
       }
-      /* #About {
-        background-color: gray;
-        color: white;
-        text-align: center;
-      } */
+
+      #Home .rightHome img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      @media (max-width: 768px) {
+        #Home {
+          flex-direction: column;
+          text-align: center;
+          gap: 5px;
+        }
+
+        #Home .leftHome,
+        #Home .rightHome {
+          width: 90%;
+          padding: 0;
+        }
+
+        #Home .leftHome {
+          font-size: 22px;
+        }
+
+        #Home .rightHome img {
+          width: 80%;
+          margin: auto;
+        }
+      }
+
       #About {
         /* padding-top: 60px; */
         padding: 60px 10px;
@@ -157,17 +223,18 @@
 
       .education-container {
         padding-top: 10px;
-        max-width: 80%;
-        margin: 0 auto;
+        max-width: 100%;
+        margin: 0;
+        padding: 3px;
       }
 
       .education-box {
         background-color: #2c3e50;
-        padding: 20px;
+        padding: 8px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: justify;
-        margin-bottom: 20px; /* Adds spacing between boxes */
+        margin-bottom: 20px;
       }
 
       .education-box h4 {
@@ -200,14 +267,10 @@
         }
       }
 
-      /* #Skills {
-        /* background-color: #333; */
-      /* color: white; */
-      /* }  */
-
       #Skills {
         /* max-width: 800px;
         margin: 50px auto; */
+        padding: 10px;
         background-color: #2c3e50;
         /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
@@ -228,7 +291,7 @@
       .skills-section {
         margin: 20px 0;
         color: black;
-        padding: 15px;
+        padding: 10px;
         text-align: justify;
         padding-bottom: 25px;
         background-color: #fff;
@@ -258,7 +321,7 @@
         margin: 5px 0;
         font-size: 1rem;
         padding: 8px 10px;
-        background: #f1f3f5;
+        background: #c3c7ca;
         border-radius: 5px;
         transition: background 0.3s;
       }
@@ -277,7 +340,7 @@
         width: 30%;
         text-align: center;
         font-weight: bold;
-        background: #dff6ff;
+        background: #41829b;
         border: 1px solid #0066cc;
       }
       #Projects {
@@ -304,7 +367,7 @@
       }
       .project {
         padding: 60px 10px;
-        background-color: #34495e;
+        background-color: #1f2937;
         color: white;
         padding: 20px;
         margin: 15px 0;
@@ -375,7 +438,8 @@
         margin-bottom: 20px;
       }
       .resume {
-        height: 255px;
+        /* height: 90%;
+        width:800px; */
         color: black;
         padding: 15px;
         text-align: center;
@@ -402,8 +466,6 @@
         text-decoration: none;
         /* font-size: 25px; */
         /* color: #0066cc; */
-        height: 50px;
-        width: 150px;
         font-family: Arial, sans-serif;
         padding: 10px 20px;
       }
@@ -460,7 +522,8 @@
     <header>
       <nav>
         <div class="left">Anil Nunnagopula</div>
-        <div class="right">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="right" id="navLinks">
           <ul>
             <li><a href="#Home">Home</a></li>
             <li><a href="#About">About</a></li>
@@ -480,7 +543,6 @@
         <div class="leftHome">
           Hi, I am <span class="purpleName">Anil Nunnagopula</span>
           <div>And I am a passionate</div>
-          <!-- <div>coder and web developer</div> -->
           <span id="element"></span>
         </div>
         <div class="rightHome">
@@ -493,7 +555,7 @@
 
       <section id="About">
         <h2>About</h2>
-        <p style="text-align: justify; margin: 0; padding: 0">
+        <p style="text-align: justify; margin-bottom: 100px; padding: 0">
           I am currently pursuing a
           <strong>B.Tech in Civil Engineering</strong> at CVR College of
           Engineering with a minor in
@@ -504,6 +566,7 @@
           solutions into traditional engineering practices, creating innovative
           and efficient outcomes.
         </p>
+        <hr />
 
         <h3 style="padding-top: 25px; padding-bottom: 0px">Education</h3>
         <div class="education-container">
@@ -571,7 +634,7 @@
       </section>
 
       <hr />
-      <section id="Skills">
+      <section id="Skills" style="margin-top: 10px; padding-top: 50px">
         <h2>Skills</h2>
         <div>
           <div class="skills-section">
@@ -769,6 +832,79 @@
               </li>
             </ul>
           </div>
+          <!-- AIQuantify Project -->
+          <div
+            class="project"
+            style="
+              background-color: #1f2937;
+              padding: 20px;
+              border-radius: 10px;
+              margin-bottom: 30px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              color: #f9fafb;
+            "
+          >
+            <h4 style="color: #22d3ee; font-size: 1.5rem; margin-bottom: 10px">
+              AIQuantify 🧠🧱 (In Progress)
+            </h4>
+            <p style="font-size: 1rem; color: #e5e7eb; line-height: 1.6">
+              A powerful AI-integrated web application designed to assist civil
+              engineers and contractors with
+              <strong
+                >automated estimation, quantity surveying, cost
+                evaluation</strong
+              >, and <strong>project duration prediction</strong>. Combines
+              visual inputs (photos/videos) and real-world data for accurate
+              real-time decision-making and smart civil planning.
+            </p>
+            <ul
+              style="
+                text-align: left;
+                margin: 0px auto 0;
+                max-width: 800px;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #d1d5db;
+              "
+            >
+              <li>
+                <strong>✨ Features (planned):</strong> AI-based image/video
+                analysis for material estimation, quantity prediction, cost
+                evaluation, crack detection, and project timeline suggestions
+                based on workers/engineers/machinery count. PDF report
+                generation, interactive dashboards, and input-based AI
+                forecasting.
+              </li>
+              <li>
+                <strong>Frontend:</strong> React.js, Tailwind CSS, Chart.js,
+                React Router v6, Context API
+              </li>
+              <li>
+                <strong>Backend:</strong> Node.js, Express, MongoDB, JWT, Python
+                (Flask/FastAPI) for AI models
+              </li>
+              <li>
+                <strong>AI Models:</strong> CNN for crack detection, Regression
+                for material & cost prediction, LSTM for timeline forecasting
+              </li>
+              <li>
+                <strong>Status:</strong> 🚧 In Progress – MVP design, model
+                training, and UI layout underway
+              </li>
+              <li>
+                <strong>Repo:</strong>
+                <a
+                  href="https://github.com/anilnunnagopula/aiquantify"
+                  target="_blank"
+                  style="color: #38bdf8; text-decoration: underline"
+                  >GitHub</a
+                >
+                |
+                <strong>Live:</strong>
+                <span style="color: #f87171">Coming Soon</span>
+              </li>
+            </ul>
+          </div>
 
           <!-- Portfolio Project -->
           <div class="project">
@@ -870,7 +1006,7 @@
       </section>
       <hr />
 
-      <section id="Resume">
+      <section id="Resume" style="margin-top: 10px; padding-top: 50px">
         <h2>Resume</h2>
 
         <div class="resume-container">
@@ -889,7 +1025,7 @@
       </section>
 
       <hr />
-      <section id="Contact">
+      <section id="Contact" style="margin-top: 10px; padding-top: 50px">
         <h2>Contact</h2>
 
         <p>Want to know more About me? Feel free to reach out!</p>
@@ -947,6 +1083,23 @@
       window.onload = function () {
         window.location.hash = "#Home";
       };
+      function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("show");
+      }
+      //to close the nav bar when clicked
+      document.addEventListener("DOMContentLoaded", function () {
+        const allLinks = document.querySelectorAll("a[href^='#']");
+
+        allLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const nav = document.getElementById("navLinks");
+            if (nav.classList.contains("show")) {
+              nav.classList.remove("show");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
