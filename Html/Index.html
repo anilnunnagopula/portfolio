@@ -36,51 +36,60 @@
       }
 
       header {
-        background-color: black;
-        color: white;
-        padding: 12px 20px;
+        background-color: #000;
+        padding: 10px 18px;
         position: fixed;
         width: 100%;
+        z-index: 999;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       }
 
       nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2px 10px;
-        position: relative;
       }
 
       .left {
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 26px;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 0.5px;
       }
 
       .menu-icon {
         display: none;
         font-size: 28px;
         cursor: pointer;
+        color: white;
       }
 
       .right ul {
         list-style: none;
         display: flex;
-        gap: 20px;
+        gap: 16px;
+        margin: 0;
+        padding: 0;
       }
 
       .right ul li a {
-        text-decoration: none;
-        color: inherit;
-        font-size: 16px;
+        display: inline-block;
+        padding: 6px 12px;
+        font-size: 15px;
         font-weight: 500;
-        transition: color 0.3s ease;
+        color: #111;
+        background-color: white;
+        border-radius: 9px;
+        text-decoration: none;
+        transition: all 0.3s ease;
       }
 
       .right ul li a:hover {
-        color: #ff0000;
+        color: #fff;
+        background-color: #e64c4c; 
+        transform: scale(1.05);
       }
-
-      /* 🌐 Mobile View */
+      /* for mobie view nav bar  */
       @media (max-width: 768px) {
         .menu-icon {
           display: block;
@@ -89,18 +98,22 @@
         .right {
           display: none;
           position: absolute;
-          top: 60px;
-          right: 20px;
-          background: rgb(18, 16, 16);
-          padding: 15px 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          z-index: 999;
+          top: 75px;
+          right: 5px;
+          background-color: #111;
+          padding: 4px 8px;
+          border-radius: 12px;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
         }
 
         .right ul {
           flex-direction: column;
-          gap: 12px;
+          gap: 16px;
+        }
+
+        .right ul li a {
+          background-color: white;
+          color: #111;
         }
 
         .right.show {
@@ -120,7 +133,7 @@
       }
 
       section {
-        padding:3px;
+        padding: 3px;
         padding-top: 100px;
         scroll-margin-top: 20px;
         min-height: 100vh;
@@ -521,7 +534,7 @@
   <body>
     <header>
       <nav>
-        <div class="left">Anil Nunnagopula</div>
+        <div class="left" style="color: white">Anil Nunnagopula</div>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
         <div class="right" id="navLinks">
           <ul>
@@ -696,7 +709,7 @@
 
         <!-- Tech Projects -->
         <div class="category">
-          <h3>Tech Projects</h3>
+          <h1 style="font-size: 30px">Tech Projects</h1>
 
           <!-- ConnectConstructions Project -->
           <div
@@ -905,21 +918,147 @@
               </li>
             </ul>
           </div>
+          <!-- Mixorix Project -->
+          <div
+            class="project"
+            style="
+              background-color: #1f2937;
+              padding: 20px;
+              border-radius: 10px;
+              margin-bottom: 30px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              color: #f9fafb;
+            "
+          >
+            <h4 style="color: #22d3ee; font-size: 1.5rem; margin-bottom: 10px">
+              ✨ Mixorix 🧱🤖 — Foundations Backed by Intelligence
+            </h4>
+            <p style="font-size: 1rem; color: #e5e7eb; line-height: 1.6">
+              An intelligent concrete mix design assistant for civil engineers
+              and construction professionals.
+              <strong>Mixorix</strong> uses AI to generate optimal mix designs
+              based on grade, slump, exposure, and workability requirements. It
+              delivers detailed proportions, visual charts, and smart
+              suggestions – all tailored to IS code standards.
+            </p>
+            <ul
+              style="
+                text-align: left;
+                margin: 0px auto 0;
+                max-width: 800px;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #d1d5db;
+              "
+            >
+              <li>
+                <strong>✨ Features (planned):</strong> AI-powered mix ratio
+                generation, IS 10262:2019 compliance, workability & W/C
+                optimization, strength prediction, and PDF report generation
+                with visual pie/bar charts.
+              </li>
+              <li>
+                <strong>Frontend:</strong> React.js, Tailwind CSS, Recharts,
+                Framer Motion, React Router v6, Context API
+              </li>
+              <li>
+                <strong>Backend:</strong> Node.js, Express, MongoDB, Flask
+                (Python) for AI model integration
+              </li>
+              <li>
+                <strong>AI Models:</strong> Rule-based logic for mix design, ML
+                for strength prediction (regression), future scope for cost
+                optimization & site-based AI suggestions
+              </li>
+              <li>
+                <strong>Status:</strong> 🚧 In Progress – Mix generation module
+                complete, working on charts and UI polish
+              </li>
+              <li>
+                <strong>Repo:</strong>
+                <a
+                  href="https://github.com/anilnunnagopula/mixorix"
+                  target="_blank"
+                  style="color: #38bdf8; text-decoration: underline"
+                  >GitHub</a
+                >
+                |
+                <strong>Live:</strong>
+                <span style="color: #f87171">Coming Soon</span>
+              </li>
+            </ul>
+          </div>
 
           <!-- Portfolio Project -->
-          <div class="project">
-            <h4>Portfolio 🌐</h4>
-            <p>
-              A sleek personal portfolio site built using HTML, CSS, and
-              JavaScript to showcase my projects, skills, and professional
-              profile. Fully responsive and easy to navigate.
+          <div
+            class="project"
+            style="
+              background-color: #1f2937;
+              padding: 20px;
+              border-radius: 10px;
+              margin-bottom: 30px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              color: #f9fafb;
+            "
+          >
+            <h4 style="color: #22d3ee; font-size: 1.5rem; margin-bottom: 10px">
+              🌐 Portfolio Website — My Digital Identity
+            </h4>
+            <p style="font-size: 1rem; color: #e5e7eb; line-height: 1.6">
+              A clean and responsive personal portfolio website built using
+              <strong>HTML</strong>, <strong>CSS</strong>, and
+              <strong>vanilla JavaScript</strong>. It showcases my journey,
+              skills, projects, and resume in a smooth, scrollable layout —
+              fully optimized for mobile and desktop experiences.
             </p>
+            <ul
+              style="
+                text-align: left;
+                margin: 0px auto 0;
+                max-width: 800px;
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #d1d5db;
+              "
+            >
+              <li>
+                <strong>✨ Features:</strong>
+                📱 Fully responsive design with smooth section transitions
+              </li>
+              <li>
+                🧭 Navbar links to Home, About, Skills, Projects, Resume,
+                Contact
+              </li>
+              <li>🎨 Interactive UI with hover effects, animations</li>
+              <li>
+                <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (Vanilla)
+              </li>
+              <li>
+                <strong>Repo:</strong>
+                <a
+                  href="https://github.com/anilnunnagopula/portfolio"
+                  target="_blank"
+                  style="color: #38bdf8; text-decoration: underline"
+                  >GitHub</a
+                >
+                |
+                <strong>Live:</strong>
+                <a
+                  href="https://anilnunnagopulaportfolio.netlify.app/#Home"
+                  target="_blank"
+                  style="color: #34d399; text-decoration: underline"
+                  >View Project</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
 
+        <hr />
+
         <!-- Core Projects -->
         <div class="category">
-          <h3>Core Projects</h3>
+          <h3 style="font-size: 30px">Core Projects</h3>
           <div class="project">
             <h4>Plan And Elevation of G+2 (Duplex House)</h4>
             <p>
