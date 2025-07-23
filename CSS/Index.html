@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anil Nunnagopula - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav-container">
+        <div class="logo">Anil's Portfolio</div>
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Participations">Participations</a></li>
+            <li><a href="#Resume">Resume</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="Home" class="hero-section">
+        <div class="container hero-content">
+          <span class="greeting">Hi, I am <span class="name">Anil</span></span>
+          <h1>
+            I am a passionate <br /><span id="element"></span>
+          </h1>
+          <div class="hero-buttons">
+            <a href="#Projects" class="btn btn-primary">My Projects</a>
+            <a href="#Contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="About" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I'm currently pursuing a
+                <strong
+                  >B.Tech in Civil Engineering with a minor in Artificial
+                  Intelligence and Machine Learning (AI-ML)</strong
+                >
+                at CVR College of Engineering. This unique blend allows me to
+                explore innovative solutions at the intersection of physical
+                infrastructure and digital technology. My journey is about
+                bridging these worlds, building robust and intelligent systems.
+              </p>
+              <p>
+                My passion lies in crafting impactful solutions, whether it's
+                designing resilient structures or developing dynamic web
+                applications. I thrive on challenging myself, constantly
+                learning new technologies, and contributing to projects that
+                make a tangible difference.
+              </p>
+            </div>
+            <div class="education-timeline">
+              <h3 class="subsection-title">My Educational Journey</h3>
+
+              <div class="timeline-item">
+                <div class="timeline-date">2022 – Present</div>
+                <div class="timeline-details">
+                  <h4>
+                    B.Tech in Civil Engineering & AI-ML Minor
+                    <span class="badge">Ongoing</span>
+                  </h4>
+                  <p class="university">CVR College of Engineering, Hyderabad</p>
+                  <p class="description">
+                    My B.Tech journey is where I've grown immensely, building
+                    strong friendships and actively engaging in coding
+                    competitions, workshops, and seminars. The AI-ML minor
+                    further empowers me to integrate cutting-edge technology
+                    into engineering solutions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">2018 – 2020</div>
+                <div class="timeline-details">
+                  <h4>Intermediate (MPC)</h4>
+                  <p class="university">New Sri Chaitanya Junior College, Hyderabad</p>
+                  <p class="description">
+                    This period was crucial for my personal growth, fostering
+                    independence and deepening my foundation in Mathematics,
+                    Physics, and Chemistry.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">2020</div>
+                <div class="timeline-details">
+                  <h4>High School</h4>
+                  <p class="university">Matilda High School, Nalgonda</p>
+                  <p class="description">
+                    My schooling laid the groundwork for my academic and social
+                    development, helping me build essential leadership and
+                    communication skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="Skills" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3 class="subsection-title">Tech Skills</h3>
+              <ul class="skill-list">
+                <li>
+                  <i class="fas fa-code skill-icon"></i>
+                  <strong>Programming Languages:</strong> C, Java, Python
+                </li>
+                <li>
+                  <i class="fas fa-globe skill-icon"></i>
+                  <strong>Web Development:</strong> HTML, CSS, JavaScript, React
+                </li>
+                <li>
+                  <i class="fas fa-tools skill-icon"></i>
+                  <strong>Tools:</strong> Git, VS Code
+                </li>
+                <li>
+                  <i class="fas fa-database skill-icon"></i>
+                  <strong>Databases:</strong> MongoDB, SQL
+                </li>
+                <li>
+                  <i class="fas fa-robot skill-icon"></i>
+                  <strong>Machine Learning:</strong> Supervised Learning (Linear
+                  & Logistic Regression), Unsupervised Learning (K-Means, PCA),
+                  Classification, Regression
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="subsection-title">Core Engineering Skills</h3>
+              <ul class="skill-list">
+                <li>
+                  <i class="fas fa-drafting-compass skill-icon"></i>
+                  <strong>Software:</strong> AutoCAD, Revit
+                </li>
+                <li>
+                  <i class="fas fa-ruler-combined skill-icon"></i>
+                  <strong>Surveying:</strong> Total Station (Intermediate)
+                </li>
+                <li>
+                  <i class="fas fa-building skill-icon"></i>
+                  <strong>Concepts:</strong> Structural Analysis & Design
+                </li>
+                <li>
+                  <i class="fas fa-project-diagram skill-icon"></i>
+                  <strong>General:</strong> Project Management, Problem-Solving,
+                  Analytical Thinking
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="subsection-title">Soft Skills & Languages</h3>
+              <ul class="skill-list">
+                <li>
+                  <i class="fas fa-comments skill-icon"></i>
+                  Effective Communication
+                </li>
+                <li>
+                  <i class="fas fa-users skill-icon"></i>
+                  Leadership & Team Collaboration
+                </li>
+                <li>
+                  <i class="fas fa-clock skill-icon"></i>
+                  Time Management
+                </li>
+                <li>
+                  <i class="fas fa-brain skill-icon"></i>
+                  Adaptability & Continuous Learning
+                </li>
+                <li>
+                  <i class="fas fa-language skill-icon"></i>
+                  <strong>Languages:</strong> English, Telugu, Hindi
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="Projects" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">My Projects</h2>
+
+          <h3 class="category-title">Featured Tech Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h4 class="project-title">IntelliHint 🧠💡 (Just Born)</h4>
+              <p class="project-description">
+                A next-gen AI-powered learning assistant built for coders,
+                students, and interview prep warriors. IntelliHint helps users
+                <strong
+                  >understand problems, dry run logic, detect patterns</strong
+                >, and get progressive hints — all without spoiling the
+                solution. Designed to make you think, not memorize.
+              </p>
+              <ul class="project-details">
+                <li>
+                  <strong>✨ Features (planned):</strong> Step-by-step AI
+                  explanations, topic & pattern identification, dry run
+                  visualizer, unlockable hint system, and motivational learning
+                  UX. PDF export for hints + explanation. Built with
+                  education-first design.
+                </li>
+                <li>
+                  <strong>Frontend:</strong> React.js, Tailwind CSS, React
+                  Router v6, Framer Motion, CodeMirror, Context API
+                </li>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express, MongoDB, JWT,
+                  Python (Flask/FastAPI) for AI model orchestration
+                </li>
+                <li>
+                  <strong>AI Models:</strong> GPT-4 (via OpenAI), LangChain for
+                  stepwise logic generation, fine-tuned future scope using
+                  LeetCode datasets
+                </li>
+                <li><strong>Status:</strong> 💥 Just Planning to build</li>
+                <li>
+                  <strong>Repo:</strong>
+                  <a
+                    href="https://github.com/anilnunnagopula/intellihint"
+                    target="_blank"
+                    class="link-primary"
+                    >GitHub</a
+                  >
+                  | <strong>Live:</strong>
+                  <span class="status-coming-soon">Coming Soon</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">
+                ConnectingConstructions 🏗️ | Revolutionizing Civil Material
+                Sourcing
+              </h4>
+              <p class="project-description">
+                As the lead developer, I engineered
+                <strong>ConnectingConstructions</strong>, a full-stack platform
+                envisioned as the "Amazon for Civil Construction." This
+                innovative solution directly addresses the fragmentation in
+                material sourcing by connecting suppliers and customers through
+                a seamless, online marketplace. It empowers users to efficiently
+                find and procure building materials and services, streamlining
+                the construction supply chain.
+              </p>
+              <ul class="project-details">
+                <li>
+                  <strong>✨ Key Features:</strong> Role-based dashboards,
+                  intuitive product listings, secure cart & checkout, integrated
+                  Google Maps for location-based services, an AI chatbot for
+                  instant support, real-time notifications, and dynamic order
+                  tracking.
+                </li>
+                <li>
+                  <strong>Frontend:</strong> React.js, Tailwind CSS, React
+                  Router v6, Context API, Axios, @react-google-maps/api
+                </li>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express, MongoDB (Cloud),
+                  JWT for authentication, Nodemailer for communication, bcrypt
+                  for security, dotenv
+                </li>
+                <li>
+                  <strong>Deployment:</strong> Netlify (Frontend), Render
+                  (Backend).
+                </li>
+                <li>
+                  <strong>Repo:</strong>
+                  <a
+                    href="https://github.com/anilnunnagopula/connectingconstructions1"
+                    target="_blank"
+                    class="link-primary"
+                    >GitHub</a
+                  >
+                  | <strong>Live:</strong>
+                  <a
+                    href="https://connectingconstructions1.netlify.app"
+                    target="_blank"
+                    class="link-success"
+                    >View Project</a
+                  >
+                </li>
+                <li>
+                  <strong>💡 My Contribution:</strong> Led the full-stack
+                  development, designing the database schema, implementing
+                  secure user authentication, developing the core marketplace
+                  logic, and integrating all third-party APIs.
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">ConnectingHostels 🏠</h4>
+              <p class="project-description">
+                A smart web app designed to help students find and explore
+                hostels in Mangalpally, Hyderabad, complete with dedicated
+                features for both students and hostel owners.
+              </p>
+              <ul class="project-details">
+                <li>
+                  <strong>✨ Features:</strong> Role-based dashboards, comprehensive
+                  hostel listings, advanced filters, multi-media upload (images
+                  & video), Google Maps integration, AI-powered descriptions,
+                  and a robust complaint & support system, with both dark/light
+                  mode options.
+                </li>
+                <li>
+                  <strong>Frontend:</strong> React.js, Tailwind CSS, React
+                  Router v6, Context API, Axios, @react-google-maps/api
+                </li>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express, MongoDB (Cloud),
+                  JWT, bcrypt, dotenv
+                </li>
+                <li>
+                  <strong>Deployment:</strong> Netlify (Frontend), Render
+                  (Backend).
+                </li>
+                <li>
+                  <strong>Repo:</strong>
+                  <a
+                    href="https://github.com/anilnunnagopula/connectinghostels"
+                    target="_blank"
+                    class="link-primary"
+                    >GitHub</a
+                  >
+                  | <strong>Live:</strong>
+                  <a
+                    href="https://connectinghostels.netlify.app"
+                    target="_blank"
+                    class="link-success"
+                    >View Project</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">
+                AIQuantify 🧠🧱 (In Progress) | Intelligent Civil Estimation
+              </h4>
+              <p class="project-description">
+                An AI-integrated web application to assist civil engineers with
+                automated estimation, quantity surveying, cost evaluation, and
+                project duration prediction.
+              </p>
+              <ul class="project-details">
+                <li>
+                  <strong>✨ Features (planned):</strong> AI-based image/video
+                  analysis for material estimation, quantity prediction, cost
+                  evaluation, crack detection, project timeline suggestions
+                  based on resources. PDF report generation, interactive
+                  dashboards, AI forecasting.
+                </li>
+                <li>
+                  <strong>Frontend:</strong> React.js, Tailwind CSS, Chart.js,
+                  React Router v6, Context API
+                </li>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express, MongoDB, JWT,
+                  Python (Flask/FastAPI) for AI models
+                </li>
+                <li>
+                  <strong>AI Models:</strong> CNN for crack detection, Regression
+                  for material & cost prediction, LSTM for timeline forecasting.
+                </li>
+                <li>
+                  <strong>Status:</strong> In Progress – MVP design, model
+                  training, and UI layout underway.
+                </li>
+                <li>
+                  <strong>Repo:</strong>
+                  <a
+                    href="https://github.com/anilnunnagopula/aiquantify"
+                    target="_blank"
+                    class="link-primary"
+                    >GitHub</a
+                  >
+                  | <strong>Live:</strong>
+                  <span class="status-coming-soon">Coming Soon</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">
+                Mixorix 🧱🤖 (In Progress) | AI Concrete Mix Design Assistant
+              </h4>
+              <p class="project-description">
+                An intelligent concrete mix design assistant for civil
+                engineers, using AI to generate optimal mix designs based on
+                various requirements and IS code standards.
+              </p>
+              <ul class="project-details">
+                <li>
+                  <strong>✨ Features (planned):</strong> AI-powered mix ratio
+                  generation, IS 10262:2019 compliance, workability & W/C
+                  optimization, strength prediction, PDF report generation with
+                  charts.
+                </li>
+                <li>
+                  <strong>Frontend:</strong> React.js, Tailwind CSS, Recharts,
+                  Framer Motion, React Router v6, Context API
+                </li>
+                <li>
+                  <strong>Backend:</strong> Node.js, Express, MongoDB, Flask
+                  (Python) for AI model integration
+                </li>
+                <li>
+                  <strong>AI Models:</strong> Rule-based logic for mix design,
+                  ML for strength prediction (regression), future scope for cost
+                  optimization & site-based AI suggestions.
+                </li>
+                <li>
+                  <strong>Status:</strong> In Progress – Mix generation module
+                  complete, working on charts and UI polish.
+                </li>
+                <li>
+                  <strong>Repo:</strong>
+                  <a
+                    href="https://github.com/anilnunnagopula/mixorix"
+                    target="_blank"
+                    class="link-primary"
+                    >GitHub</a
+                  >
+                  | <strong>Live:</strong>
+                  <span class="status-coming-soon">Coming Soon</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-card">
+              <h4 class="project-title">
+                🌐 Portfolio Website — My Digital Identity
+              </h4>
+              <p class="project-description">
+                A clean and responsive personal portfolio website built using
+                <strong>HTML</strong>, <strong>CSS</strong>, and
+                <strong>vanilla JavaScript</strong>. It showcases my journey,
+                skills, projects, and resume in a smooth, scrollable layout —
+                fully optimized for mobile and desktop experiences.
+              </p>
+              <ul class="project-details">
+                <li>
+                  <strong>✨ Features:</strong> 📱 Fully responsive design with
+                  smooth section transitions, 🧭 Navbar links to Home, About,
+                  Skills, Projects, Resume, Contact, 🎨 Interactive UI with
+                  hover effects, animations.
+                </li>
+                <li>
+                  <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (Vanilla)
+                </li>
+                <li>
+                  <strong>Repo:</strong>
+                  <a
+                    href="https://github.com/anilnunnagopula/portfolio"
+                    target="_blank"
+                    class="link-primary"
+                    >GitHub</a
+                  >
+                  | <strong>Live:</strong>
+                  <a
+                    href="https://anilnunnagopulaportfolio.netlify.app/#Home"
+                    target="_blank"
+                    class="link-success"
+                    >View Project</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="divider" />
+
+          <h3 class="category-title">Core Engineering Projects</h3>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h4 class="project-title">
+                Plan And Elevation of G+2 (Duplex House)
+              </h4>
+              <p class="project-description">
+                Designed detailed plans and elevations for a G+2 residential
+                building using Revit software. This project allowed me to
+                integrate architectural and 3D design principles, showcasing my
+                proficiency in BIM tools.
+              </p>
+            </div>
+            <div class="project-card">
+              <h4 class="project-title">
+                Structural Health Monitoring of CVR College Buildings (In
+                Progress)
+              </h4>
+              <p class="project-description">
+                A non-destructive testing project focused on monitoring the
+                structural health of buildings at CVR College. This involves
+                advanced data collection and analysis to ensure long-term
+                integrity and safety.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="Participations" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Participations</h2>
+          <div class="participations-list">
+            <div class="participation-item">
+              <p>
+                Attended a two-day International conference on
+                <b
+                  >"Sustainable Material, Methodologies, Technologies And
+                  Applications in Engineering (ICS2MT)2025"</b
+                >
+                conducted by the CIVIL Engineering department, CVR College Of
+                Engineering. The conference was held in a hybrid mode, where
+                delegates presented papers on the usage of sustainable
+                materials. It was an enriching experience where I was exposed to
+                new ideas and gained valuable knowledge about the latest
+                advancements in sustainable engineering practices.
+              </p>
+            </div>
+            <div class="participation-item">
+              <p>
+                Participated in
+                <b>Anti-Drug Summit 2024</b> as a core committee member from CVR
+                College Of Engineering at <b>Bits Pilani Hyderabad campus</b>,
+                conducted by the Telangana government. I contributed to the
+                summit's efforts to raise awareness about the dangers of drug
+                abuse. Additionally, I took the opportunity to explore the
+                campus and engage with the discussions, reaffirming my
+                commitment to a drug-free lifestyle and promoting a healthy,
+                drug-free environment. The summit was not just an event but an
+                eye-opening experience, as it highlighted the dangers of drug
+                abuse, its social implications, and the measures we can take as
+                a community to tackle this issue. I was actively involved in
+                discussions and awareness campaigns, interacting with both the
+                attendees and speakers, to better understand the psychological,
+                social, and health-related consequences of drugs.
+              </p>
+              <a href="BitsPilani.jpg" target="_blank" class="link-certificate"
+                >View Certificate</a
+              >
+            </div>
+
+            <div class="participation-item">
+              <p>
+                Participated in the
+                <b>"Industry-Academia Conclave - UTHKARSH"</b> organized by the
+                <b>Institution's Innovation Council (IIC)</b> at CVR College of
+                Engineering on 27th December 2022. During this event, various
+                innovative ideas were presented, and one of the highlights was a
+                demonstration of a mini tractor designed to perform all
+                fieldwork tasks at a low cost. This innovation aims to assist
+                farmers by providing them with an affordable solution for their
+                farming needs. The presentation was insightful and showcased the
+                potential for technological advancements in agricultural
+                practices.
+              </p>
+              <a
+                href="ParticipationInIIC.jpg"
+                target="_blank"
+                class="link-certificate"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="Resume" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Resumes</h2>
+
+          <div class="resume-buttons-container">
+            <div class="resume-button-group">
+              <h3 class="subsection-title">Tech Resume</h3>
+              <a href="AnilNunnagopula1Resume.pdf" target="_blank" class="btn btn-primary"
+                >View Tech Resume</a
+              >
+            </div>
+
+            <div class="resume-button-group">
+              <h3 class="subsection-title">Core Engineering Resume</h3>
+              <a href="AnilNnnagopula_ResumeCE.pdf" target="_blank" class="btn btn-primary"
+                >View Core Resume</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+      <section id="Contact" class="section-padding">
+        <div class="container">
+          <h2 class="section-title">Contact Me</h2>
+
+          <p class="contact-tagline">
+            Want to know more about me? Feel free to reach out!
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/anil-nunnagopula15112004/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a
+              href="mailto:anilnunnagopula15@gmail.com,btech2k26@gmail.com,22B81A0104@cvr.ac.in"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+
+            <a
+              href="https://github.com/anilnunnagopula"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://leetcode.com/u/btech2k26/"
+              target="_blank"
+              class="social-icon"
+            >
+              <img
+                src="leetcodeImage1.png"
+                alt="LeetCode"
+                class="leetcode-icon"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/rowdy_darling_____/"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Anil Nunnagopula. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      // Initialize Typed.js
+      var typed = new Typed("#element", {
+        strings: ["Coder and Web Developer...", "AI & ML Enthusiast...", "Civil Engineer..."],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+      });
+
+      // Automatically navigate to the Home section on page refresh
+      window.onload = function () {
+        window.location.hash = "#Home";
+      };
+
+      // Toggle mobile navigation menu
+      function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("show");
+      }
+
+      // Close navigation bar when a link is clicked
+      document.addEventListener("DOMContentLoaded", function () {
+        const allLinks = document.querySelectorAll("a[href^='#']");
+
+        allLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            const nav = document.getElementById("navLinks");
+            if (nav.classList.contains("show")) {
+              nav.classList.remove("show");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
