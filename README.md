@@ -34,7 +34,7 @@ This portfolio showcases my journey, skills, projects, and resume in a smooth, s
 
 If you’d like to collaborate, feel free to reach out!  
 
-- **Email:** your.email@example.com  
+- **Email:** btech2k26@gmail.com  
 - **LinkedIn:** [Anil Nunnagopula](https://www.linkedin.com/in/anil-nunnagopula15112004/)  
 - **GitHub:** [Anil Nunnagopula](https://github.com/anilnunnagopula)  
 
